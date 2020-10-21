@@ -1,24 +1,28 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+import Checkout from "./Checkout";
+import Login from "./Login";
+import Home from "./Home";
+
+const App = () => {
   return (
     <Router>
       <div className="app">
         <Switch>
           <Route path="/checkout">
-            <p>Checkout Page</p>
+            <Checkout />
           </Route>
           <Route path="/login">
-            <p>Login Page</p>
+            <Login />
           </Route>
           <Route path="/">
-            <p>Home page</p>
+            <Home />
           </Route>
         </Switch>
       </div>
     </Router>
   );
-}
+};
 
 export default App;
