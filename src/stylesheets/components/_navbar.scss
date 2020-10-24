@@ -1,0 +1,120 @@
+.navbar {
+  background-color: #131921;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding-left: 7px;
+  padding-right: 7px;
+
+  a {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    span {
+      margin-top: 5px;
+    }
+  }
+
+  .navbar__logo {
+    object-fit: contain;
+    width: 100px;
+    margin-top: 10px;
+  }
+
+  .navbar__search {
+    flex: 1;
+    margin-left: 15px;
+    .navbar__searchForm {
+      display: flex;
+    }
+    .navbar__searchInput {
+      height: 20px;
+      width: 100%;
+      padding: 8px;
+      font-size: 15px;
+      border: none;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+    .navbar__searchIcon {
+      background-color: $color-amazon;
+      padding: 6px;
+      border: none;
+      display: flex;
+      align-items: center;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+
+  .navbar__toggle {
+    font-size: 1.5rem;
+    color: white;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+  }
+
+  .navbar__links {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    .navbar__login {
+      margin-left: 15px;
+      margin-right: 15px;
+      display: grid;
+    }
+    .navbar__basket {
+      margin-left: 15px;
+      display: block;
+      text-align: center;
+    }
+    .navbar__basketCount {
+      margin-left: 5px;
+    }
+    .navbar__loginLineOne {
+      font-size: 12px;
+    }
+  }
+  .navbar__toggle {
+    display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 0;
+
+    .navbar__toggle {
+      display: block;
+      margin-left: 15px;
+    }
+
+    .navbar__links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 60px;
+      display: none;
+      transition: all 0.5s ease;
+      background-color: #131921;
+    }
+
+    .navbar__links.active {
+      background: #242222;
+      left: 0;
+      display: block;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+
+    .navbar__item {
+      text-align: center;
+      padding: 15px;
+    }
+  }
+}
